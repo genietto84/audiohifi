@@ -83,7 +83,11 @@
 					{$HOOK_TOP}
 				</div>
 			</div>
-
+			{if $page_name == 'index'} 
+			<div id="home_lider" class="grid_9 alpha omega">
+				{$HOOK_TOP_SLIDER}
+			</div>
+			{/if}
 			<div id="columns" class="grid_9 alpha omega clearfix">
 				<!-- Left -->
 				<div id="left_column" class="column grid_2 alpha">
@@ -91,5 +95,5 @@
 				</div>
 
 				<!-- Center -->
-				<div id="center_column" class=" grid_5">
+				<div id="center_column" class=" grid_7 omega">
 	{/if}
