@@ -62,6 +62,7 @@
 	<script type="text/javascript" src="{$js_uri}"></script>
 	{/foreach}
 {/if}
+	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 		{$HOOK_HEADER}
 	</head>
 	
@@ -72,28 +73,28 @@
 			<p>{l s='You cannot place a new order from your country.'} <span class="bold">{$geolocation_country}</span></p>
 		</div>
 		{/if}
-		<div id="page" class="container_9 clearfix">
+		<div id="page" class="clearfix">
 
 			<!-- Header -->
-			<div id="header" class="grid_9 alpha omega">
+			<div id="header" class="alpha omega">
 				<a id="header_logo" href="{$base_dir}" title="{$shop_name|escape:'htmlall':'UTF-8'}">
 					<img class="logo" src="{$logo_url}" alt="{$shop_name|escape:'htmlall':'UTF-8'}" {if $logo_image_width}width="{$logo_image_width}"{/if} {if $logo_image_height}height="{$logo_image_height}" {/if} />
 				</a>
-				<div id="header_right" class="grid_6 omega">
+				<div id="header_right">
 					{$HOOK_TOP}
 				</div>
 			</div>
-			{if $page_name == 'index'} 
-			<div id="home_lider" class="grid_9 alpha omega">
+			{*if $page_name == 'index'*} 
+			<div id="home_lider">
 				{$HOOK_TOP_SLIDER}
 			</div>
-			{/if}
-			<div id="columns" class="grid_9 alpha omega clearfix">
+			{*/if*}
+			<div id="columns" class="clearfix">
 				<!-- Left -->
-				<div id="left_column" class="column grid_2 alpha">
+				<div id="left_column" class="column">
 					{$HOOK_LEFT_COLUMN}
 				</div>
 
 				<!-- Center -->
-				<div id="center_column" class=" grid_7 omega">
+				<div id="center_column">
 	{/if}
