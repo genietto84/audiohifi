@@ -89,6 +89,7 @@
 				{$HOOK_TOP_SLIDER}
 			</div>
 			{*/if*}
+			<div class="page_shadow"></div>
 			<div id="columns" class="clearfix">
 				<!-- Left -->
 				<div id="left_column" class="column">

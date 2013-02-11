@@ -27,7 +27,6 @@
 <div id="featured-products_block_center" class="block products_block clearfix">
 	<p class="title_block">{l s='Featured products' mod='homefeatured'}</p>
 	{if isset($products) AND $products}
-		{* $products|@print_r *}
 		<div class="block_content">
 			{assign var='liHeight' value=250}
 			{assign var='nbItemsPerLine' value=4}
