@@ -84,11 +84,17 @@
 					{$HOOK_TOP}
 				</div>
 			</div>
-			{*if $page_name == 'index'*} 
+			{if $page_name == 'index'} 
 			<div id="home_lider">
 				{$HOOK_TOP_SLIDER}
 			</div>
-			{*/if*}
+			<div id="home_banner">
+				<img src="{$img_dir}tmp/banner1.png" />
+				<img src="{$img_dir}tmp/banner2.png" />
+				<img src="{$img_dir}tmp/banner3.png" />
+				<img src="{$img_dir}tmp/banner4.png" />
+			</div>
+			{/if}
 			<div class="page_shadow"></div>
 			<div id="columns" class="clearfix">
 				<!-- Left -->

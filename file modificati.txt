@@ -1,0 +1,5 @@
+override/classes/controller/frontcontroller.php
+modules/homeslider
+modules/blocknewproducts
+modules/blockbestsellers
+modules/blockspecials

@@ -51,7 +51,7 @@ a {cursor:pointer}
 		generic style
 ************************************************************************************************ */
 body{
-	font:normal 11px/14px 'Trebuchet MS', Arial, Verdana, sans-serif;
+	font:normal 14px/18px 'Trebuchet MS', Arial, Verdana, sans-serif;
 	color:#222;
 	background:#fff
 }
@@ -2111,5 +2111,22 @@ tr.subitem > td:first-child + td {
 /** FOOTER **/
 #footer .title_block { border-bottom: 3px groove #fff; font-size: 18px}
 #footer .block_content { font-size: 12px}
+
+/** FOOTER WIDGET **/
+#footer_widget .block { width: 370px; margin-right: 20px; float: left; }
+#footer_widget .block:last-child { margin-right: 0px; }
+#footer_widget .block .block_content { border: 1px solid #b8b7b7; padding: 20px 17px; margin-top: 24px}
+#footer_widget .block .title_block { position: relative; }
+#footer_widget .block .more {
+	background-color: #9c9c9c;
+ 	line-height: 24px;
+ 	position: absolute;
+ 	right: 7px;
+	font-size: 14px;
+	width: 58px;
+	text-align: center;
+}
+
+#footer_widget .block .more a {color: #fff; font-family: 'Trebuchet MS',Arial,Verdana,sans-serif; font-weight: normal}
 
 

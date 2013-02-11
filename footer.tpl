@@ -28,6 +28,9 @@
 
 			</div>
 			<div class="page_shadow"></div>
+			<div id="footer_widget" class="clearfix">
+				{$HOOK_FOOTER_WIDGET}
+			</div>
 <!-- Footer -->
 			<div id="footer" class="clearfix">
 				{$HOOK_FOOTER}
