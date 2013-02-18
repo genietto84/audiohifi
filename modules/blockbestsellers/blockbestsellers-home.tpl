@@ -29,8 +29,8 @@
 		{l s='Top sellers' mod='blockbestsellers'}
 		<span class="more"><a style="float:right;" href="{$link->getPageLink('best-sales')}" title="{l s='All best sellers' mod='blockbestsellers'}" >{l s='More' mod='blockbestsellers'} &raquo;</a></span>
 	</p>
-	{if isset($best_sellers) AND $best_sellers}
-		<div class="block_content">
+	<div class="block_content">
+		{if isset($best_sellers) AND $best_sellers}
 			{assign var='liHeight' value=320}
 			{assign var='nbItemsPerLine' value=4}
 			{assign var='nbLi' value=$best_sellers|@count}
@@ -43,10 +43,10 @@
 				</li>
 			{/foreach}
 			</ul>
-		</div>
-	{else}
-		<p>{l s='No best sellers at this time' mod='blockbestsellers'}</p>
-	{/if}
+		{else}
+			<p>{l s='No best sellers at this time' mod='blockbestsellers'}</p>
+		{/if}
+	</div>
 	<br class="clear"/>
 </div>
 <!-- /MODULE Home Block best sellers -->

@@ -733,3 +733,27 @@ function checkUrl()
 		}
 	}
 }
+
+// Change value on uqantity field
+function quantityProductAdd(){
+	current = $('#quantity_wanted').val();
+	if(current == 0)
+		$('#quantity_wanted_p .minus').css('cursor','pointer');
+		
+	$('#quantity_wanted').val(++current);
+}
+
+function quantityProductRemove(){
+	current = $('#quantity_wanted').val();
+	if(current > 0)
+		$('#quantity_wanted').val(--current);	
+	
+	if(current === 0)
+		$('#quantity_wanted_p .minus').css('cursor', 'default');
+	
+}
+
+$(document).ready(function(){
+	$('#quantity_wanted_p .plus').bind('click',quantityProductAdd);
+	$('#quantity_wanted_p .minus').bind('click',quantityProductRemove);
+});

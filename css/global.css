@@ -2120,7 +2120,7 @@ tr.subitem > td:first-child + td {
 /** FOOTER WIDGET **/
 #footer_widget .block { width: 370px; margin-right: 15px; float: left; }
 #footer_widget .block:last-child { margin-right: 0px; }
-#footer_widget .block .block_content { border: 1px solid #b8b7b7; padding: 10px 17px; margin-top: 24px}
+#footer_widget .block .block_content { border: 1px solid #b8b7b7; padding: 10px 17px; margin-top: 24px;min-height:122px}
 #footer_widget .block .title_block { position: relative; }
 #footer_widget .block .more {
 	background-color: #9c9c9c;
