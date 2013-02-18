@@ -1,7 +1,7 @@
 #featured-products_block_center li {
 	margin-right:10px;
 	padding:10px 8px;
-	width: 214px;
+	width: 212px;
 	margin: 10px 20px 10px 0px;
 	height:420px;
 	-moz-box-sizing: border-box;
@@ -83,7 +83,7 @@
 
 #featured-products_block_center .add_to_cart_container { 
 	float: left;
-	width: 118px;
+	width: 117px;
 	height: 40px;
 	min-height: 40px;
 	margin: 4px 3px 0px 0px;

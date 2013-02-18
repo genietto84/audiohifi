@@ -1,16 +1,15 @@
 /* Block specials */
 #special_block_right p {
 	padding-bottom:0;
-	font-weight:bold;
 	text-align:right
 }
 
 #special_block_right p.title_block, #special_block_right h4  {
-	padding:6px 11px;
+	padding:14px 11px;
 	text-align:left
 }
 #special_block_right .products li {
-	padding:15px 0;
+	padding:0;
 	width: 130px;
 	border:none;
 }
@@ -52,4 +51,11 @@
 	font-weight:bold;
 	font-size:14px;
 	color:#900
+}
+
+#new-special_block_right .more {
+	padding-right: 10px;
+	font-weight:bold;
+	color:#0088cc;
+	background:url(img/arrow_right_1.png) no-repeat 100% 4px;
 }

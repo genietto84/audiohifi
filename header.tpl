@@ -73,10 +73,10 @@
 			<p>{l s='You cannot place a new order from your country.'} <span class="bold">{$geolocation_country}</span></p>
 		</div>
 		{/if}
-		<div id="page" class="clearfix">
+		<div id="page" class="container_5 clearfix">
 
 			<!-- Header -->
-			<div id="header" class="alpha omega">
+			<div id="header" class="grid_5 alpha omega">
 				<a id="header_logo" href="{$base_dir}" title="{$shop_name|escape:'htmlall':'UTF-8'}">
 					<img class="logo" src="{$logo_url}" alt="{$shop_name|escape:'htmlall':'UTF-8'}" {if $logo_image_width}width="{$logo_image_width}"{/if} {if $logo_image_height}height="{$logo_image_height}" {/if} />
 				</a>
@@ -85,7 +85,7 @@
 				</div>
 			</div>
 			{if $page_name == 'index'} 
-			<div id="home_lider">
+			<div id="home_lider" class="grid_5 alpha omega">
 				{$HOOK_TOP_SLIDER}
 			</div>
 			<div id="home_banner">
@@ -95,13 +95,13 @@
 				<img src="{$img_dir}tmp/banner4.png" />
 			</div>
 			{/if}
-			<div class="page_shadow"></div>
-			<div id="columns" class="clearfix">
+			<div class="page_shadow grid_5 alpha omega clearfix"></div>
+			<div id="columns" class="grid_5 alpha omega clearfix">
 				<!-- Left -->
-				<div id="left_column" class="column">
+				<div id="left_column" class="column grid_1 alpha">
 					{$HOOK_LEFT_COLUMN}
 				</div>
 
 				<!-- Center -->
-				<div id="center_column">
+				<div id="center_column" class="grid_4 omega">
 	{/if}

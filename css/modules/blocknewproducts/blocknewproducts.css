@@ -3,7 +3,7 @@
 #new-products_block_right li {
 	float:left;
 	margin-right:17px;
-	padding:10px 0;
+	padding:0;
 }
 #new-products_block_right li:last-child {margin-right:0px;}
 
