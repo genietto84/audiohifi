@@ -1,0 +1,29 @@
+.bx-pager {
+	position: absolute;
+   	bottom: -3px;
+	left: 0;
+	padding-top: 7px;
+	font-size:11px;
+	color:#666;
+	text-align:center;
+	width:100%;
+	min-height:84px;
+	background:url('../../../img/bg_slider.png') no-repeat center center;
+}
+.bx-pager a {
+	display:inline-block;
+	zoom:1;
+	margin-right: 5px;
+	padding:40px 4px 4px 4px;
+	height:16px;/* 19 */
+	width:18px;/* 19 */
+	font-weight:bold;
+	font-size: 11px;
+	color:#000;
+	text-decoration:none;
+	background:url('../../../img/slider_round.png') no-repeat center center;
+	margin-right:170px;
+	font-size:0
+}
+.bx-pager a.pager-active {background:url('../../../img/slider_round_hover.png') no-repeat center center;}
+.bx-pager a:last-child {margin-right:0}
