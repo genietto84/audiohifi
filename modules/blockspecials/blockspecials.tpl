@@ -27,7 +27,7 @@
 <div id="special_block_right" class="block products_block exclusive blockspecials">
 	<p class="title_block">
 		<a href="{$link->getPageLink('prices-drop')}" title="{l s='Specials' mod='blockspecials'}">{l s='Specials' mod='blockspecials'}</a>
-		<span class="more"><a href="{$link->getPageLink('prices-drop')}" title="{l s='All specials' mod='blockspecials'}">&raquo; {l s='More' mod='blockspecials'}</a></span>
+		<span class="more"><a href="{$link->getPageLink('prices-drop')}" title="{l s='All specials' mod='blockspecials'}">{l s='More' mod='blockspecials'} &raquo;</a></span>
 	</p>
 	<div class="block_content">
 

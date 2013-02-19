@@ -1,2 +1,7 @@
 #best-sellers_block_center p.title_block, #special_block_right h4  {padding:14px 11px;}
-#best-sellers_block_center .products li {padding:0}
+#best-sellers_block_center li {
+	float:left;
+	margin-right:17px;
+	padding:0;
+}
+#best-sellers_block_center li:last-child {margin-right:0px;}
