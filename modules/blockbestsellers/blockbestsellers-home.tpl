@@ -32,7 +32,7 @@
 	<div class="block_content">
 		{if isset($best_sellers) AND $best_sellers}
 			{assign var='liHeight' value=320}
-			{assign var='nbItemsPerLine' value=4}
+			{assign var='nbItemsPerLine' value=3}
 			{assign var='nbLi' value=$best_sellers|@count}
 			{math equation="nbLi/nbItemsPerLine" nbLi=$nbLi nbItemsPerLine=$nbItemsPerLine assign=nbLines}
 			{math equation="nbLines*liHeight" nbLines=$nbLines|ceil liHeight=$liHeight assign=ulHeight}
@@ -41,6 +41,7 @@
 				<li style="border-bottom:0" class="ajax_block_product {if $smarty.foreach.myLoop.first}first_item{elseif $smarty.foreach.myLoop.last}last_item{else}item{/if} {if $smarty.foreach.myLoop.iteration%$nbItemsPerLine == 0}last_item_of_line{elseif $smarty.foreach.myLoop.iteration%$nbItemsPerLine == 1}clear{/if} {if $smarty.foreach.myLoop.iteration > ($smarty.foreach.myLoop.total - ($smarty.foreach.myLoop.total % $nbItemsPerLine))}last_line{/if}">
 					<a href="{$product.link}" title="{$product.name|escape:html:'UTF-8'}" class="product_image"><img src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'medium_default')}" height="{$mediumSize.height}" width="{$mediumSize.width}" alt="{$product.name|escape:html:'UTF-8'}" /></a>
 				</li>
+				{if $smarty.foreach.myLoop.iteration == $nbItemsPerLine}{break}{/if}
 			{/foreach}
 			</ul>
 		{else}

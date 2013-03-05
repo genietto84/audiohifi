@@ -25,9 +25,11 @@
 	background:none
 }
 #special_block_right li.product_image {
-	padding-right:10px;
-	width:62px;
+	width:96px;
+	margin-right:17px;
 }
+
+#special_block_right li.product_image:last-child {margin-right:0}
 
 #special_block_right .products span.price-discount {
 	font-size:14px;

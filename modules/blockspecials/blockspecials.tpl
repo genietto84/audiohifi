@@ -33,9 +33,11 @@
 
 {if $special}
 		<ul class="products clearfix">
+			{for $i=0 to 2}
 			<li class="product_image">
-				<a href="{$special.link}"><img src="{$link->getImageLink($special.link_rewrite, $special.id_image, 'medium_default')}" alt="{$special.legend|escape:html:'UTF-8'}" height="{$mediumSize.height}" width="{$mediumSize.width}" title="{$special.name|escape:html:'UTF-8'}" /></a>
+				<a href="{$special[$i].link}" title="{$special[$i].name|escape:html:'UTF-8'}" class="product_image"><img src="{$link->getImageLink($special[$i].link_rewrite, $special[$i].id_image, 'medium_default')}" height="{$mediumSize.height}" width="{$mediumSize.width}" alt="{$special[$i].name|escape:html:'UTF-8'}" /></a>
 			</li>
+			{/for}
 		</ul>
 {else}
 		<p>{l s='No specials at this time' mod='blockspecials'}</p>
