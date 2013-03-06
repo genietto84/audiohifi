@@ -28,6 +28,7 @@
 .bx-pager a.pager-active {background:url('../../../img/slider_round_hover.png') no-repeat center center;}
 .bx-pager a:last-child {margin-right:0}
 
+#homeslider li {padding-top:93px;}
 #homeslider .red {
 	background: #ff0000; /* Old browsers */
 	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
