@@ -2115,7 +2115,6 @@ tr.subitem > td:first-child + td {
 	background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-8 */
 	max-height:58px;
-	overflow:hidden;
 }
 
 #page {
@@ -2129,8 +2128,8 @@ tr.subitem > td:first-child + td {
 
 /** LEFT COLUMN BLOCK **/
 /*#left_column {float: left;}*/
-#left_column .block ul li a:hover { background-color: #f58220 ; color: #fff; }
-#left_column .block ul li a {background: url("../../../modules/blockmanufacturer/img/arrow_right_2.png") no-repeat scroll right 10px transparent }
+#left_column .block ul li a:hover { background: url("../img/arrow_right_3.png") no-repeat scroll right center #f58220; color: #fff; }
+#left_column .block ul li a { background: none; min-height:28px;line-height:28px}
 
 /** **/
 /*#center_column {float: left; clear: right; }*/
