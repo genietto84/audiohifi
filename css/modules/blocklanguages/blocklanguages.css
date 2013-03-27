@@ -1,0 +1,93 @@
+/* block top languages */
+#header_right #languages_block_top {
+	float:right;
+	margin: 0;
+	height:58px;
+}
+#header_right #languages_block_top p {
+	clear: left;
+	padding-right:20px;
+	color: #fff;
+	text-align: right;
+	display:block;
+	line-height:58px;
+	height:58px;
+	font-size:18px;
+}
+#languages_block_top ul#first-languages li {
+	float: left;
+	margin-right: 3px
+}
+#languages_block_top ul#first-languages li.selected_language {
+	float: left;
+}
+/*languages with jquery*/
+#countries {
+	cursor: pointer;
+	position: relative;
+	top: 1px;
+}
+#countries p {
+	position: relative;
+	top: 0;
+	padding: 0;
+}
+#countries p img {
+	padding-left: 5px;
+}
+#countries .countries_ul:after {
+	content:'';
+	display:block;
+	position:absolute;
+	top:-30px; /*should be set to -border-width x 2 */
+	left:37px;
+	width:0;
+	height:0;
+	border-color: transparent transparent rgba(0,0,0,0.75) transparent; /*border color should be same as div div background color*/
+	border-style: solid;
+	border-width: 15px;
+}
+#countries .countries_ul{
+	display:none;
+	z-index: 10000;
+	padding:10px;
+	list-style-type:none;
+	position:relative;
+}
+#countries .countries_ul_hover{
+	display:block;
+	z-index: 5000;
+	position:absolute;
+	top:58px;
+	right:6px;
+	padding:5px 10px;
+	height:auto;
+	background:rgba(0,0,0,0.75);
+	color:#fff;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+}
+
+#countries .countries_ul li{
+	text-align:left;
+	text-decoration:none;
+	padding:10px;
+	width:50px;
+}
+
+#countries .countries_ul li .lang_iso{
+	margin-left: 5px;
+}
+#countries .countries_ul li a:hover .lang_iso {
+	text-decoration:underline;
+}
+#countries .countries_ul li a {
+	color:#fff;
+	text-decoration:none;
+}
+
+#countries .countries_ul li a:hover {
+	color:#fff;
+	text-decoration:none;
+}
