@@ -2131,6 +2131,8 @@ tr.subitem > td:first-child + td {
 	max-height:58px;
 }
 
+#header_logo .logo {margin-top:-2px}
+
 #page {
 	position:relative;
 }
@@ -2206,7 +2208,6 @@ ol, ul {
 }
 
 #megamenu li.parent a {
-    background-image: url('images/sub-indicator.png');
     background-repeat: no-repeat;
     background-position: 80% center;
     padding-right: 38px;
@@ -2290,7 +2291,6 @@ ol, ul {
     font-size: 0.83em;
     margin: 0;
     padding-left: 24px;
-    background: url('images/sub-list.png') center left no-repeat;
 }
 
 
