@@ -70,11 +70,12 @@ var delete_txt = '{l s='Delete' mod='blockcart' js=1}';
 	<!-- block list of products -->
 	<div id="cart_block_list" class="{if isset($colapseExpandStatus) && $colapseExpandStatus eq 'expanded' || !$ajax_allowed || !isset($colapseExpandStatus)}expanded{else}collapsed{/if}">
 	{if $products}
-		<dl class="products">
+		<dl class="products clearfix">
 		{foreach from=$products item='product' name='myLoop'}
 			{assign var='productId' value=$product.id_product}
 			{assign var='productAttributeId' value=$product.id_product_attribute}
 			<dt id="cart_block_product_{$product.id_product}_{if $product.id_product_attribute}{$product.id_product_attribute}{else}0{/if}_{if $product.id_address_delivery}{$product.id_address_delivery}{else}0{/if}" class="{if $smarty.foreach.myLoop.first}first_item{elseif $smarty.foreach.myLoop.last}last_item{else}item{/if}">
+				<span class="product_image"><img src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'cart_block')}" alt="{$product.legend|escape:'htmlall':'UTF-8'}" /></span>
 				<span class="quantity-formated"><span class="quantity">{$product.cart_quantity}</span>x</span>
 				<a class="cart_block_product_name" href="{$link->getProductLink($product, $product.link_rewrite, $product.category, null, null, $product.id_shop, $product.id_product_attribute)}" title="{$product.name|escape:html:'UTF-8'}">
 				{$product.name|escape:html:'UTF-8'}</a>
@@ -99,6 +100,7 @@ var delete_txt = '{l s='Delete' mod='blockcart' js=1}';
 					{foreach from=$customizedDatas.$productId.$productAttributeId[$product.id_address_delivery] key='id_customization' item='customization' name='customizations'}
 						<li name="customization">
 							<div class="deleteCustomizableProduct" id="deleteCustomizableProduct_{$id_customization|intval}_{$product.id_product|intval}_{$product.id_product_attribute|intval}_{$product.id_address_delivery|intval}"><a class="ajax_cart_block_remove_link" href="{$link->getPageLink('cart', true, NULL, "delete&amp;id_product={$product.id_product|intval}&amp;ipa={$product.id_product_attribute|intval}&amp;id_customization={$id_customization}&amp;token={$static_token}", true)}" rel="nofollow"> </a></div>
+							<span class="product_image"><img src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'cart_block')}" alt="{$product.legend|escape:'htmlall':'UTF-8'}" /></span>
 							<span class="quantity-formated"><span class="quantity">{$customization.quantity}</span>x</span>{if isset($customization.datas.$CUSTOMIZE_TEXTFIELD.0)}
 							{$customization.datas.$CUSTOMIZE_TEXTFIELD.0.value|escape:html:'UTF-8'|replace:"<br />":" "|truncate:28}
 							{else}

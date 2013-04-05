@@ -49,7 +49,7 @@
 				{/if}
 			{/if}
 					<img src="{$img_lang_dir}{$language.id_lang}.jpg" alt="{$language.iso_code}" width="22" height="22" />
-					<span class="lang_iso">{$language.iso_code}</span>
+					<span class="lang_iso">{$language.name|regex_replace:'/ \(.*\)/':''}</span>
 			{if $language.iso_code != $lang_iso}
 				</a>
 			{/if}
