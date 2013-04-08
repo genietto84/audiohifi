@@ -54,7 +54,7 @@
 }
 #header_user_info a.account {
 	border: none;
-	display: inline;
+	display: none;
 	margin: 0;
 	padding: 0;
 }
