@@ -231,7 +231,7 @@ input.button_small, input.button_small_disabled, input.exclusive_small, input.ex
 input.button_disabled, input.exclusive_disabled, span.exclusive {
 	margin: 0 10px;
 	line-height: 50px;
-	background:url(../img/add_to_cart.png) no-repeat left center #f5f5f5;
+	background:url(../img/add_to_cart_disabled.png) no-repeat left center #f5f5f5;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;

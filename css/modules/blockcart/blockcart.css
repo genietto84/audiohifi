@@ -78,11 +78,12 @@
 #cart_block #cart_block_list dl {
 	padding-bottom:10px
 }
-#cart_block #cart_block_list dt {padding:4px 0;float:left;border-bottom:1px dotted #fff;}
+#cart_block #cart_block_list dt {padding:4px 0;float:left;}
 #cart_block #cart_block_list dt a {font-weight:bold}
 #cart_block #cart_block_list dd {
 	margin-left:65px;
 	clear:both;
+	margin-bottom:5px;
 }
 
 #cart_block #cart-prices {
