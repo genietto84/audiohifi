@@ -276,7 +276,7 @@ var fieldRequired = '{l s='Please fill in all required fields, then save the cus
 				{foreach from=$groups key=id_attribute_group item=group}
 					{if $group.attributes|@count}
 						<fieldset class="attribute_fieldset">
-							<label class="attribute_label" for="group_{$id_attribute_group|intval}">{$group.name|escape:'htmlall':'UTF-8'} :</label>
+							<label class="attribute_label{if ($group.group_type == 'color')} color{/if}" for="group_{$id_attribute_group|intval}">{$group.name|escape:'htmlall':'UTF-8'} :</label>
 							{assign var="groupName" value="group_$id_attribute_group"}
 							<div class="attribute_list">
 							{if ($group.group_type == 'select')}
@@ -419,8 +419,8 @@ var fieldRequired = '{l s='Please fill in all required fields, then save the cus
 			</div>
 			<div class="content_add_to_cart">
 				<!-- quantity wanted -->
+				<label>{l s='Quantity:'}</label>
 				<p id="quantity_wanted_p"{if (!$allow_oosp && $product->quantity <= 0) OR $virtual OR !$product->available_for_order OR $PS_CATALOG_MODE} style="display: none;"{/if}>
-					<label>{l s='Quantity:'}</label>
 					<span class="plus">+</span>
 					<input type="text" name="qty" id="quantity_wanted" class="text" value="{if isset($quantityBackup)}{$quantityBackup|intval}{else}{if $product->minimal_quantity > 1}{$product->minimal_quantity}{else}1{/if}{/if}" size="2" maxlength="3" {if $product->minimal_quantity > 1}onkeyup="checkMinimalQuantity({$product->minimal_quantity});"{/if} />
 					<span class="minus">-</span>
@@ -446,9 +446,9 @@ var fieldRequired = '{l s='Please fill in all required fields, then save the cus
 						<input type="submit" name="Submit" value="{l s='Add to cart'}" class="exclusive" />
 					</p>
 				{/if}
-				{if isset($HOOK_PRODUCT_ACTIONS) && $HOOK_PRODUCT_ACTIONS}{$HOOK_PRODUCT_ACTIONS}{/if}
 			</div>
 		</div>
+		{if isset($HOOK_PRODUCT_ACTIONS) && $HOOK_PRODUCT_ACTIONS}{$HOOK_PRODUCT_ACTIONS}{/if}
 		</form>
 		{/if}
 		{if isset($HOOK_EXTRA_RIGHT) && $HOOK_EXTRA_RIGHT}{$HOOK_EXTRA_RIGHT}{/if}
