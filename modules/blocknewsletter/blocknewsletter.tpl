@@ -42,10 +42,11 @@
 					<option value="0"{if isset($action) && $action == 0} selected="selected"{/if}>{l s='Subscribe' mod='blocknewsletter'}</option>
 					<option value="1"{if isset($action) && $action == 1} selected="selected"{/if}>{l s='Unsubscribe' mod='blocknewsletter'}</option>
 				</select>-->
-					<input type="submit" value="ok" class="button_mini" name="submitNewsletter" />
+					<input type="submit" value="{l s='Subscribe now' mod='blocknewsletter'}" class="button_mini" name="submitNewsletter" />
 				<input type="hidden" name="action" value="0" />
 			</p>
 		</form>
 	</div>
+	<img src="{$img_dir}/icon/newsletter.png" alt="newsletter" class="icon" />
 </div>
 <!-- /Block Newsletter module-->

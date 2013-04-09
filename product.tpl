@@ -148,7 +148,7 @@ var fieldRequired = '{l s='Please fill in all required fields, then save the cus
 //]]>
 </script>
 
-{include file="$tpl_dir./breadcrumb.tpl"}
+{*include file="$tpl_dir./breadcrumb.tpl"*}
 <div id="primary_block" class="clearfix">
 
 	{if isset($adminActionDisplay) && $adminActionDisplay}
@@ -312,36 +312,39 @@ var fieldRequired = '{l s='Please fill in all required fields, then save the cus
 						</fieldset>
 					{/if}
 				{/foreach}
-				</div>
+				</div><!-- end product_attributes -->
 			{/if}
 			<p id="product_reference" {if isset($groups) OR !$product->reference}style="display: none;"{/if}>
 				<label for="product_reference">{l s='Reference:'} </label>
 				<span class="editable">{$product->reference|escape:'htmlall':'UTF-8'}</span>
 			</p>
+		</div>
+		<div class="clearfix">
+			<div class="availability">
+				<!-- availability -->
+				<p id="availability_statut"{if ($product->quantity <= 0 && !$product->available_later && $allow_oosp) OR ($product->quantity > 0 && !$product->available_now) OR !$product->available_for_order OR $PS_CATALOG_MODE} style="display: none;"{/if}>
+					<span id="availability_label"{if $product->quantity <= 0} class="warning_inline"{/if}>{l s='Availability:'}</span>
+					<span id="availability_value"{if $product->quantity <= 0} class="warning_inline"{/if}>
+					{if $product->quantity <= 0}{if $allow_oosp}{$product->available_later}{else}{l s='This product is no longer in stock'}{/if}{else}{$product->available_now}{/if}
+					</span>
+				</p>
 
-			<!-- availability -->
-			<p id="availability_statut"{if ($product->quantity <= 0 && !$product->available_later && $allow_oosp) OR ($product->quantity > 0 && !$product->available_now) OR !$product->available_for_order OR $PS_CATALOG_MODE} style="display: none;"{/if}>
-				<span id="availability_label">{l s='Availability:'}</span>
-				<span id="availability_value"{if $product->quantity <= 0} class="warning_inline"{/if}>
-				{if $product->quantity <= 0}{if $allow_oosp}{$product->available_later}{else}{l s='This product is no longer in stock'}{/if}{else}{$product->available_now}{/if}
-				</span>
-			</p>
-
-			<!-- number of item in stock -->
-			{if ($display_qties == 1 && !$PS_CATALOG_MODE && $product->available_for_order)}
-			<p id="pQuantityAvailable"{if $product->quantity <= 0} style="display: none;"{/if}>
-				<span id="quantityAvailable">{$product->quantity|intval}</span>
-				<span {if $product->quantity > 1} style="display: none;"{/if} id="quantityAvailableTxt">{l s='item in stock'}</span>
-				<span {if $product->quantity == 1} style="display: none;"{/if} id="quantityAvailableTxtMultiple">{l s='items in stock'}</span>
-			</p>
-			{/if}
-
-			<!-- Out of stock hook -->
-			<p id="oosHook"{if $product->quantity > 0} style="display: none;"{/if}>
-				{$HOOK_PRODUCT_OOS}
-			</p>
-
-			<p class="warning_inline" id="last_quantities"{if ($product->quantity > $last_qties OR $product->quantity <= 0) OR $allow_oosp OR !$product->available_for_order OR $PS_CATALOG_MODE} style="display: none"{/if} >{l s='Warning: Last items in stock!'}</p>
+				<!-- number of item in stock -->
+				{if ($display_qties == 1 && !$PS_CATALOG_MODE && $product->available_for_order)}
+				<p id="pQuantityAvailable"{if $product->quantity <= 0} style="display: none;"{/if}>
+					<span id="quantityAvailable">{$product->quantity|intval}</span>
+					<span {if $product->quantity > 1} style="display: none;"{/if} id="quantityAvailableTxt">{l s='item in stock'}</span>
+					<span {if $product->quantity == 1} style="display: none;"{/if} id="quantityAvailableTxtMultiple">{l s='items in stock'}</span>
+				</p>
+				{/if}
+				<p class="warning_inline" id="last_quantities"{if ($product->quantity > $last_qties OR $product->quantity <= 0) OR $allow_oosp OR !$product->available_for_order OR $PS_CATALOG_MODE} style="display: none"{/if} >{l s='Warning: Last items in stock!'}</p>
+			</div><!-- end .availability -->
+			<div class="oos">
+				<!-- Out of stock hook -->
+				<p id="oosHook"{if $product->quantity > 0} style="display: none;"{/if}>
+					{$HOOK_PRODUCT_OOS}
+				</p>
+			</div><!-- end .oos -->
 		</div>
 		<div class="clearfix">
 			<div class="content_prices clearfix">
