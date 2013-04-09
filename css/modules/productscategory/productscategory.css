@@ -13,6 +13,7 @@ h2.productscategory_h2 {
 	float: left;
 	width: 96%;
 	height:158px;
+	margin:0 1%;
 }
 #productscategory_list ul {
 	list-style-type:none;

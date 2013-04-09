@@ -276,7 +276,6 @@ var fieldRequired = '{l s='Please fill in all required fields, then save the cus
 				{foreach from=$groups key=id_attribute_group item=group}
 					{if $group.attributes|@count}
 						<fieldset class="attribute_fieldset">
-							<label class="attribute_label{if ($group.group_type == 'color')} color{/if}" for="group_{$id_attribute_group|intval}">{$group.name|escape:'htmlall':'UTF-8'} :</label>
 							{assign var="groupName" value="group_$id_attribute_group"}
 							<div class="attribute_list">
 							{if ($group.group_type == 'select')}
@@ -288,8 +287,8 @@ var fieldRequired = '{l s='Please fill in all required fields, then save the cus
 							{elseif ($group.group_type == 'color')}
 							<div id="color_to_pick_div">
 								<span id="color_to_pick_span">{$group.attributes[$group.default]}</span>
-								<span style="background-color:{$colors[$group.default].value}" class="color"></span>
-								<span class="arrow" onclick="$('#color_to_pick_list').toggleClass('hidden');"></span>
+								<span style="background-color:{$colors[$group.default].value}" class="color"> </span>
+								<span class="arrow" onclick="$('#color_to_pick_list').toggleClass('hidden');"> </span>
 							</div>
 								<ul id="color_to_pick_list" class="hidden clearfix">
 									{assign var="default_colorpicker" value=""}
