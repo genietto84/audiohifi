@@ -645,6 +645,9 @@ function colorPickerClick(elt)
 									});
 								});
 	$(elt).parent().parent().parent().children('.color_pick_hidden,#color_pick_hidden').val(id_attribute);
+	$('#color_to_pick_span').text($(elt).text());
+	$('#color_to_pick_div .color').css('background-color',$(elt).children('.color').css('background-color'));
+	$('#color_to_pick_list').toggleClass('hidden');
 	findCombination(false);
 }
 
@@ -756,4 +759,7 @@ function quantityProductRemove(){
 $(document).ready(function(){
 	$('#quantity_wanted_p .plus').bind('click',quantityProductAdd);
 	$('#quantity_wanted_p .minus').bind('click',quantityProductRemove);
+
+	$('#color_to_pick_span').text($('#color_to_pick_list li.selected a').text());
+	$('#color_to_pick_div .color').css('background-color',$('#color_to_pick_list li.selected a').children('.color').css('background-color'));
 });

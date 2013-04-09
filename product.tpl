@@ -286,11 +286,18 @@ var fieldRequired = '{l s='Please fill in all required fields, then save the cus
 									{/foreach}
 								</select>
 							{elseif ($group.group_type == 'color')}
-								<ul id="color_to_pick_list" class="clearfix">
+							<div id="color_to_pick_div">
+								<span id="color_to_pick_span">{$group.attributes[$group.default]}</span>
+								<span style="background-color:{$colors[$group.default].value}" class="color"></span>
+								<span class="arrow" onclick="$('#color_to_pick_list').toggleClass('hidden');"></span>
+							</div>
+								<ul id="color_to_pick_list" class="hidden clearfix">
 									{assign var="default_colorpicker" value=""}
 									{foreach from=$group.attributes key=id_attribute item=group_attribute}
 									<li{if $group.default == $id_attribute} class="selected"{/if}>
-										<a id="color_{$id_attribute|intval}" class="color_pick{if ($group.default == $id_attribute)} selected{/if}" style="background: {$colors.$id_attribute.value};" title="{$colors.$id_attribute.name}" onclick="colorPickerClick(this);getProductAttribute();{if $colors|@count > 0}$('#wrapResetImages').show('slow');{/if}">
+										<a id="color_{$id_attribute|intval}" class="color_pick{if ($group.default == $id_attribute)} selected{/if}" title="{$colors.$id_attribute.name}" onclick="colorPickerClick(this);getProductAttribute();{if $colors|@count > 0}$('#wrapResetImages').show('slow');{/if}">
+											{$colors.$id_attribute.name}
+											<span style="background: {$colors.$id_attribute.value};" class="color">
 											{if file_exists($col_img_dir|cat:$id_attribute|cat:'.jpg')}
 												<img src="{$img_col_dir}{$id_attribute}.jpg" alt="{$colors.$id_attribute.name}" width="20" height="20" /><br>
 											{/if}
