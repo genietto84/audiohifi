@@ -42,21 +42,6 @@
 	<div class="rte{if $content_only} content_only{/if}">
 		{$cms->content}
 	</div>
-	{if isset($cms_pages) & !empty($cms_pages)}
-	<p class="title_block">{l s='List of pages in %s:' sprintf=$cms_category->name}</p>
-		<ul class="bullet {$cms_category->name|lower} clearfix">
-			{foreach from=$cms_pages key=id item=cmspages}
-				<li id="faq-{$id}" class="faq">
-					<a href="{$link->getCMSLink($cmspages.id_cms, $cmspages.link_rewrite)|escape:'htmlall':'UTF-8'}">
-						<div>
-							<span class="icon"> </span>
-							<span class="title">{$cmspages.meta_title|escape:'htmlall':'UTF-8'}
-						</div>
-					</a>
-				</li>
-			{/foreach}
-		</ul>
-	{/if}
 {elseif isset($cms_category)}
 	<div class="block-cms">
 		<h1><a href="{if $cms_category->id eq 1}{$base_dir}{else}{$link->getCMSCategoryLink($cms_category->id, $cms_category->link_rewrite)}{/if}">{$cms_category->name|escape:'htmlall':'UTF-8'}</a></h1>
@@ -72,18 +57,10 @@
 		{/if}
 		{if isset($cms_pages) & !empty($cms_pages)}
 		<p class="title_block">{l s='List of pages in %s:' sprintf=$cms_category->name}</p>
-			<ul class="bullet {$cms_category->name|lower} clearfix">
-				{foreach from=$cms_pages key=id item=cmspages}
-					<li id="faq-{$id}" class="faq">
-						<span>{*$link->getCMSLink($cmspages.id_cms, $cmspages.link_rewrite)|escape:'htmlall':'UTF-8'*}
-							<div>
-								<span class="icon"> </span>
-								<span class="title">{$cmspages.meta_title|escape:'htmlall':'UTF-8'}
-							</div>
-						</span>
-						<div class="content">
-							{$cmspages.content}
-						</div>
+			<ul class="bullet">
+				{foreach from=$cms_pages item=cmspages}
+					<li>
+						<a href="{$link->getCMSLink($cmspages.id_cms, $cmspages.link_rewrite)|escape:'htmlall':'UTF-8'}">{$cmspages.meta_title|escape:'htmlall':'UTF-8'}</a>
 					</li>
 				{/foreach}
 			</ul>

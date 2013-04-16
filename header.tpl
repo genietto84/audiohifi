@@ -83,6 +83,7 @@
 
 		});
 	</script>
+	<script type="text/javascript" src="{$js_dir}/faq.js"></script>
 	</head>
 	
 	<body {if isset($page_name)}id="{$page_name|escape:'htmlall':'UTF-8'}"{/if} class="{if $hide_left_column}hide-left-column{/if} {if $hide_right_column}hide-right-column{/if} {if $content_only} content_only {/if}">
