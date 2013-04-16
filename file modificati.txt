@@ -3,3 +3,8 @@ modules/homeslider
 modules/blocknewproducts
 modules/blockbestsellers
 modules/blockspecials
+
+/* Moduli Aggiunti */
+blockfollowus
+blockgooglemaps
+blockmyaccountheader

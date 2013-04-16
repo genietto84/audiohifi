@@ -34,9 +34,9 @@
 <!-- Footer -->
 			<div id="footer" class="grid_5 alpha omega clearfix">
 				{$HOOK_FOOTER}
-				{if $PS_ALLOW_MOBILE_DEVICE}
+				{*if $PS_ALLOW_MOBILE_DEVICE}
 					<p class="center clearBoth"><a href="{$link->getPageLink('index', true)}?mobile_theme_ok">{l s='Browse the mobile site'}</a></p>
-				{/if}
+				{/if*}
 			</div>
 		</div>
 	{/if}
