@@ -578,7 +578,8 @@ div.star_hover a, div.star a:hover { background-position: 0 -32px }
 
 #header_right {
 	position:relative;
-	float: right
+	float: left;
+	width:970px;
 }
 
 
@@ -2222,117 +2223,3 @@ tr.subitem > td:first-child + td {
 ol, ul {
 	list-style: none;
 }
-
-#megamenu {
-    float: left;
-    margin-left: 1.8em;
-}
-
-#megamenu li, #megamenu li a {
-    height: 58px;
-    line-height: 58px;
-    float: left;
-    text-align: center;
-}
-
-#megamenu li a {
-    display: block;
-    border-right: 2px solid #ffffff;
-    color: #8a8a8a;
-    font-size: 0.91em; 
-    text-decoration: none;
-    padding: 0 1.667em;
-}
-
-#megamenu li:hover a {
-    background-color: #37050e;
-    background-color: rgba(0,0,0,0.4);
-}
-
-#megamenu li.parent a {
-    background-repeat: no-repeat;
-    background-position: 80% center;
-    padding-right: 38px;
-	color:#fff;
-}
-
-/* da css nascondiamo il sottomenu, verrà mostrato soltanto da js */
-#megamenu .wrapMegamenu {
-    display: none;
-    position: absolute; 
-    top: 58px;
-    left: 0;
-    width: 100%;
-    background-color: #545454;
-    padding: 2.5em 0 1.6em;
-}
-
-.no-js #megamenu li:hover .wrapMegamenu {
-    display: block;
-}
-                            
-/* reset */                            
-#megamenu .sub-menu li, #megamenu .sub-menu li a {
-    background: none repeat scroll 0 0 transparent;
-    border: medium none;
-    height: auto;
-    line-height: 1.8em;
-    padding: 0;
-}
-
-/* colonne */
-#megamenu .sub-menu li {
-    width: 194px;
-    float: left;
-    padding-right: 30px;
-    margin-right: 30px;
-    border-right: 1px solid #cdd2d6;        
-}
-
-#megamenu .sub-menu li.last {
-    padding-right: 0;
-    margin-right: 0;
-    border-right: 0;        
-}
-
-/* stili */
-#megamenu .sub-menu li a {
-    text-transform: uppercase;
-    display: block;
-    float: none;
-    text-align: left;
-    color: #8a8a8a;
-    font-size: 0.83em;
-    margin: 1em 0 1.2em;
-}
-
-#megamenu .sub-menu li p.descrizione {
-    text-align: left;
-    color: #8a8a8a;  
-    font-size: 0.83em;
-}     
-
-#megamenu .sub-menu li p.descrizione a {
-    color: #8a8a8a;
-    display: inline;
-    font-size: 1em;
-    margin: 0;
-    text-transform: none;
-}     
-
-#megamenu .sub-menu li ul {
-    margin-top: 1em;
-}
-
-#megamenu .sub-menu li ul li a {
-    text-transform: none;
-    display: block;
-    float: none;
-    text-align: left;
-    color: #8a8a8a;
-    font-size: 0.83em;
-    margin: 0;
-    padding-left: 24px;
-}
-
-

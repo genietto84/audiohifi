@@ -1,7 +1,7 @@
 /* block top user information */
 
 #header_right #header_user {
-	float: left;
+	float: right;
 	height:58px;
 	line-height:58px;
 	margin-right:20px;

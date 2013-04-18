@@ -2,6 +2,7 @@
 #search_block_top {
 	float:left;
 	margin-right:20px;
+	margin:0 20px;
 }
 #search_block_top p {padding:0;position:relative}
 #search_block_top #search_query_top {
