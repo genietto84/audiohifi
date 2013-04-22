@@ -1572,18 +1572,6 @@ form#add_adress {}
 /* ************************************************************************************************
 		PAGE MANUFACTURER
 ************************************************************************************************ */
-#manufacturer p.title_block {
-	background-color: #EFEFEF;
-	color: #666666;
-	font-size: 24px;
-	padding: 11px;
-	text-align: left
-}
-#manufacturer span.title_block{  
-	background-color: #FFFFFF;
-    margin-left: -11px;
-    padding: 2px 11px;
-}
 #manufacturer .categories_list {
 	float:right;
 	width:826px;
