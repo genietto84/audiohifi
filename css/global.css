@@ -1595,6 +1595,9 @@ form#add_adress {}
   vertical-align: middle;
   margin-right: -0.25em;
  }
+ #manufacturer .categories_list li.all {
+ 	float:left;
+}
 #manufacturer .categories_list li {
 	float:right;
 	width:100px;

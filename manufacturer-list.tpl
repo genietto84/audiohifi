@@ -33,6 +33,7 @@
 {else}
 	{if $nb_all_categories > 0}
 		<ul class="categories_list clearfix {$nb_all_categories}">
+			<li class="all {if !$selected_category}selected{/if}"><a href="{$link->getPageLink('manufacturer')}?n=20&p=1">{l s='All Categories'}</a></li>
 			{foreach from=$all_categories item=category}
 				<li {if $selected_category == $category.infos.id_category}class="selected"{/if}><a href="{$link->getPageLink('manufacturer')}?n=20&p=1&cat={$category.infos.id_category}">{$category.infos.name}</a></li>
 			{/foreach}
