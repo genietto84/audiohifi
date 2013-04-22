@@ -1,4 +1,5 @@
 override/classes/controller/frontcontroller.php
+override/controller/front/ManufacturerController.php
 modules/homeslider
 modules/blocknewproducts
 modules/blockbestsellers
@@ -8,3 +9,5 @@ modules/blockspecials
 blockfollowus
 blockgooglemaps
 blockmyaccountheader
+blockquickcontact
+megamenu

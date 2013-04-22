@@ -26,60 +26,39 @@
 {capture name=path}{l s='Manufacturers'}{/capture}
 {include file="$tpl_dir./breadcrumb.tpl"}
 
-<h1>{l s='Manufacturers'}</h1>
+<p class="title_block"><span class="title_block">{l s='Manufacturers'}</span></p>
 
 {if isset($errors) AND $errors}
 	{include file="$tpl_dir./errors.tpl"}
 {else}
-	<p class="nbrmanufacturer">{strip}
-		<span class="bold">
-			{if $nbManufacturers == 0}{l s='There are no manufacturers.'}
-			{else}
-				{if $nbManufacturers == 1}
-					{l s='There is %d manufacturer.' sprintf=$nbManufacturers}
-				{else}
-					{l s='There are %d manufacturers.' sprintf=$nbManufacturers}
-				{/if}
-			{/if}
-		</span>{/strip}
-	</p>
-
+	{if $nb_all_categories > 0}
+		<ul class="categories_list clearfix {$nb_all_categories}">
+			{foreach from=$all_categories item=category}
+				<li {if $selected_category == $category.infos.id_category}class="selected"{/if}><a href="{$link->getPageLink('manufacturer')}?n=20&p=1&cat={$category.infos.id_category}">{$category.infos.name}</a></li>
+			{/foreach}
+		</ul>
+	{/if}
 	{if $nbManufacturers > 0}
-		<ul id="manufacturers_list">
+		<ul id="manufacturers_list" class="clearfix">
 		{foreach from=$manufacturers item=manufacturer name=manufacturers}
-			<li class="clearfix {if $smarty.foreach.manufacturers.first}first_item{elseif $smarty.foreach.manufacturers.last}last_item{else}item{/if}"> 
-				<div class="left_side">
-					<!-- logo -->
-					<div class="logo">
-					{if $manufacturer.nb_products > 0}<a href="{$link->getmanufacturerLink($manufacturer.id_manufacturer, $manufacturer.link_rewrite)|escape:'htmlall':'UTF-8'}" title="{$manufacturer.name|escape:'htmlall':'UTF-8'}" class="lnk_img">{/if}
-						<img src="{$img_manu_dir}{$manufacturer.image|escape:'htmlall':'UTF-8'}-medium_default.jpg" alt="" width="{$mediumSize.width}" height="{$mediumSize.height}" />
-					{if $manufacturer.nb_products > 0}</a>{/if}
-					</div>
-					<!-- name -->
-					<h3>
-						{if $manufacturer.nb_products > 0}<a href="{$link->getmanufacturerLink($manufacturer.id_manufacturer, $manufacturer.link_rewrite)|escape:'htmlall':'UTF-8'}">{/if}
-						{$manufacturer.name|truncate:60:'...'|escape:'htmlall':'UTF-8'}
-						{if $manufacturer.nb_products > 0}</a>{/if}
-					</h3>
-					<p class="description rte">
-					{if $manufacturer.nb_products > 0}<a href="{$link->getmanufacturerLink($manufacturer.id_manufacturer, $manufacturer.link_rewrite)|escape:'htmlall':'UTF-8'}">{/if}
-						{$manufacturer.short_description}
-					{if $manufacturer.nb_products > 0}</a>{/if}
-					<br />
-					{if $manufacturer.nb_products > 0}<a href="{$link->getmanufacturerLink($manufacturer.id_manufacturer, $manufacturer.link_rewrite)|escape:'htmlall':'UTF-8'}">{/if}
-						<span>{if $manufacturer.nb_products == 1}{l s='%d product' sprintf=$manufacturer.nb_products|intval}{else}{l s='%d products' sprintf=$manufacturer.nb_products|intval}{/if}</span>
-					{if $manufacturer.nb_products > 0}</a>{/if}
-					</p>
-				</div>
-
-				<div class="right_side">
-				{if $manufacturer.nb_products > 0}
-					<a class="button" href="{$link->getmanufacturerLink($manufacturer.id_manufacturer, $manufacturer.link_rewrite)|escape:'htmlall':'UTF-8'}">{l s='view products'}</a>
-				{/if}
-				</div>
+			<li class="{if $smarty.foreach.manufacturers.first}first_item{elseif $smarty.foreach.manufacturers.last}last_item{else}item{/if}">
+				<a href="{$link->getmanufacturerLink($manufacturer.id_manufacturer, $manufacturer.link_rewrite)|escape:'htmlall':'UTF-8'}" class="lnk_img" title="{$manufacturer.name|escape:'htmlall':'UTF-8'} ({$manufacturer.nb_products} {if $manufacturer.nb_products != 1}{l s='Products'}{else}{l s='Product'}{/if})">
+					<img src="{$img_manu_dir}{$manufacturer.id_manufacturer}-manufacturer.jpg" alt="{$manufacturer.name|escape:'htmlall':'UTF-8'}" />
+				</a>
 			</li>
 		{/foreach}
 		</ul>
 		{include file="$tpl_dir./pagination.tpl"}
+	{/if}
+	{if $nbManufacturers == 0}
+	<p class="nbrmanufacturer">
+		<span class="bold">
+			{if $selected_category}
+				{l s='There are no manufacturers for this category.'}
+			{else}
+				{l s='There are no manufacturers.'}
+			{/if}
+		</span>
+	</p>
 	{/if}
 {/if}
