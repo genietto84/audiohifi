@@ -95,6 +95,47 @@
 				<img src="{$img_dir}tmp/banner3.png" />
 				<img src="{$img_dir}tmp/banner4.png" />
 			</div>
+			{else}
+				{if $page_name != 'pagenotfound' && isset($category)}
+					{if $category->id AND $category->active}
+						{if $scenes || $category->description || $category->id_image}
+						<div class="content_scene_cat">
+							<div class="category_info_wrapper">
+								{if $scenes}
+									<!-- Scenes -->
+									{include file="$tpl_dir./scenes.tpl" scenes=$scenes}
+								{else}
+									<!-- Category image -->
+									{if $category->id_image}
+										<img src="{$link->getCatImageLink($category->link_rewrite, $category->id_image, 'category_default')}" alt="{$category->name|escape:'htmlall':'UTF-8'}" title="{$category->name|escape:'htmlall':'UTF-8'}" id="categoryImage" width="{$categorySize.width}" height="{$categorySize.height}" />
+									{/if}
+								{/if}
+								<div class="category_info">
+									<h1>
+										{strip}
+											{$category->name|escape:'htmlall':'UTF-8'}
+											{if isset($categoryNameComplement)}
+												{$categoryNameComplement|escape:'htmlall':'UTF-8'}
+											{/if}
+										{/strip}
+									</h1>
+									{if $category->description}
+										<div class="cat_desc">
+										{if strlen($category->description) > 120}
+											<p id="category_description_short">{$category->description|truncate:120}</p>
+											<p id="category_description_full" style="display:none">{$category->description}</p>
+											<a href="#" onclick="$('#category_description_short').hide(); $('#category_description_full').show(); $(this).hide(); return false;" class="lnk_more">{l s='More'}</a>
+										{else}
+											<p>{$category->description}</p>
+										{/if}
+										</div>
+									{/if}
+								</div>
+							</div><!-- .category_info_wrapper -->
+						</div>
+						{/if}
+					{/if}
+				{/if}
 			{/if}
 			<div class="page_shadow grid_5 alpha omega clearfix"></div>
 			<div id="columns" class="grid_5 alpha omega clearfix">

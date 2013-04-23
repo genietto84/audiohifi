@@ -50,7 +50,7 @@
 	<!-- Pagination -->
 	<div id="pagination" class="pagination">
 	{if $start!=$stop}
-		<ul class="pagination">
+		<ul class="pagination clearfix">
 		{if $p != 1}
 			{assign var='p_previous' value=$p-1}
 			<li id="pagination_previous"><a {$no_follow_text} href="{$link->goPage($requestPage, $p_previous)}">&laquo;&nbsp;{l s='Previous'}</a></li>

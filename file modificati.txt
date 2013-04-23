@@ -4,6 +4,7 @@ modules/homeslider
 modules/blocknewproducts
 modules/blockbestsellers
 modules/blockspecials
+modules/homefeatured
 
 /* Moduli Aggiunti */
 blockfollowus

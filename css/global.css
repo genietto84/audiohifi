@@ -392,8 +392,6 @@ ul.footer_links li .icon {
 	background:url(../img/bg_bt_compare.gif) repeat-x 0 0 #111;
 }
 
-.sortPagiBar .nbrItemPage {margin-left:40px;}
-
 .sortPagiBar .PrductSort {float:left;}
 
 .sortPagiBar .nbrProduct {
@@ -1619,14 +1617,21 @@ form#add_adress {}
 #manufacturer #manufacturers_list li a.lnk_img {
 	display:inline-block;
 }
-#manufacturer div.pagination {
-	float:left;
-	clear:both;
-}
 #manufacturer .nbrmanufacturer {
 	float:left;
 	clear:both;
 }
+#manufacturer #pagination {
+	float:left;
+	clear:both;
+	width:100%;
+	text-align:center;
+}
+#manufacturer ul.pagination  li {
+	float:none;
+}
+#manufacturer ul.pagination  li span,#manufacturer ul.pagination  li a {border:1px solid #989898;background-color:#aaa;color:#fff;}
+#manufacturer ul.pagination  li.current span {background-color:#fff;color:#666;}
 /* ************************************************************************************************
 		PAGE SUPPLIER
 ************************************************************************************************ */
