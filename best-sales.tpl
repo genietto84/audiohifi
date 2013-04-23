@@ -34,7 +34,7 @@
 
 		<div class="sortPagiBar clearfix">
 			{include file="./product-sort.tpl"}
-			{include file="./product-compare.tpl"}
+			
 			{include file="./nbr-product-page.tpl"}
 		</div>
 	</div>
@@ -43,7 +43,7 @@
 
 	<div class="content_sortPagiBar">
 		<div class="sortPagiBar clearfix">
-			{include file="./product-sort.tpl"} {include file="./product-compare.tpl"} {include file="./nbr-product-page.tpl"}
+			{include file="./product-sort.tpl"}  {include file="./nbr-product-page.tpl"}
 
 		</div>
 		{include file="./pagination.tpl"}

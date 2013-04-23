@@ -23,7 +23,7 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 
-{if isset($orderby) AND isset($orderway)}
+{if ( isset($orderby) AND isset($orderway) ) OR $page_name == 'search'}
 
 {* On 1.5 the var request is setted on the front controller. The next lines assure the retrocompatibility with some modules *}
 {if !isset($request)}

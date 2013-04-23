@@ -97,7 +97,7 @@
 			</div>
 			{else}
 				{if $page_name != 'pagenotfound' && isset($category)}
-					{if $category->id AND $category->active}
+					{if $category->id AND $category->id != 1 AND $category->active}
 						{if $scenes || $category->description || $category->id_image}
 						<div class="content_scene_cat">
 							<div class="category_info_wrapper">

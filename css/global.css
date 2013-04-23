@@ -372,6 +372,7 @@ ul.footer_links li .icon {
 	font:normal 11px Arial, Verdana, sans-serif;
 	color:#666;
 	background:#eee;
+	clear:left;
 }
 	#center_column .sortPagiBar strong {color:#000;}
 #center_column .sortPagiBar p {padding:0;}
