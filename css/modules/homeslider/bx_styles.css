@@ -13,6 +13,7 @@
 	color:#666;
 	text-align:center;
 	width:100%;
+	min-width:1140px;
 	min-height:84px;
 	background:url('../../../img/bg_slider.png') no-repeat center center transparent;
 }
