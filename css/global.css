@@ -407,31 +407,37 @@ form.pagination {display:none;}
 
 div.pagination {
 	margin:10px 0;
-	text-align: center
+	float:left;
+	clear:both;
+	width:100%;
+	text-align:center;
 }
 ul.pagination {list-style-type:none}
-ul.pagination li {display: inline;}
+ul.pagination li {display: inline;float:none;}
 ul.pagination a, ul.pagination span {
 	display:inline-block;
 	height:24px;
 	width:24px;
-	border:1px solid #eee;
 	-moz-border-radius:2px;
 	-webkit-border-radius:2px;
 	border-radius:2px;
 	font:11px/24px Arial,Verdana,sans-serif;
-	color:#999
+	border:1px solid #989898;
+	background-color:#aaa;
+	color:#fff;
+	
 }
 ul.pagination a {
 	text-align:center;
 }
 ul.pagination a:hover {
 	color:#333;
-	border:1px solid #333
 }
 ul.pagination .current span {
-	color:#000;
-	border:1px solid #fff
+	background-color:#fff;
+	color:#666;
+	border:1px solid #989898;
+	
 }
 ul.pagination li.disabled span {color:#ccc}
 
@@ -444,8 +450,14 @@ ul.pagination li.disabled span {color:#ccc}
 }
 #pagination_previous span,
 #pagination_next span {
-	color:#ccc;
-	border:1px solid #eee
+	display:none;
+}
+
+#pagination {
+	float:left;
+	clear:both;
+	width:100%;
+	text-align:center;
 }
 
 /* CART steps *********************************************************************** */
@@ -1622,17 +1634,6 @@ form#add_adress {}
 	float:left;
 	clear:both;
 }
-#manufacturer #pagination {
-	float:left;
-	clear:both;
-	width:100%;
-	text-align:center;
-}
-#manufacturer ul.pagination  li {
-	float:none;
-}
-#manufacturer ul.pagination  li span,#manufacturer ul.pagination  li a {border:1px solid #989898;background-color:#aaa;color:#fff;}
-#manufacturer ul.pagination  li.current span {background-color:#fff;color:#666;}
 /* ************************************************************************************************
 		PAGE SUPPLIER
 ************************************************************************************************ */
