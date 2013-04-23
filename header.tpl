@@ -65,6 +65,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 		{$HOOK_HEADER}
 	<script type="text/javascript" src="{$js_dir}/faq.js"></script>
+	<script type="text/javascript" src="{$js_dir}/custom.js"></script>
 	</head>
 	
 	<body {if isset($page_name)}id="{$page_name|escape:'htmlall':'UTF-8'}"{/if} class="{if $hide_left_column}hide-left-column{/if} {if $hide_right_column}hide-right-column{/if} {if $content_only} content_only {/if}">
@@ -74,29 +75,26 @@
 			<p>{l s='You cannot place a new order from your country.'} <span class="bold">{$geolocation_country}</span></p>
 		</div>
 		{/if}
-		<div id="page" class="container_5 clearfix">
-
+		<div id="page">
 			<!-- Header -->
-			<div id="header" class="grid_5 alpha omega">
-				<a id="header_logo" href="{$base_dir}" title="{$shop_name|escape:'htmlall':'UTF-8'}">
-					<img class="logo" src="{$img_dir}/logo.png" alt="{$shop_name|escape:'htmlall':'UTF-8'}" />
-				</a>
-				<div id="header_right">
-					{$HOOK_TOP}
+			<div id="header" class="alpha omega">
+				<div class="header_inner container_5 clearfix">
+					<a id="header_logo" href="{$base_dir}" title="{$shop_name|escape:'htmlall':'UTF-8'}">
+						<img class="logo" src="{$img_dir}/logo.png" alt="{$shop_name|escape:'htmlall':'UTF-8'}" />
+					</a>
+					<div id="header_right">
+						{$HOOK_TOP}
+					</div>
 				</div>
 			</div>
 			{if $page_name == 'index'} 
-			<div id="home_lider" class="grid_5 alpha omega">
-				{$HOOK_TOP_SLIDER}
-			</div>
-			<div id="home_banner">
-				<img src="{$img_dir}tmp/banner1.png" />
-				<img src="{$img_dir}tmp/banner2.png" />
-				<img src="{$img_dir}tmp/banner3.png" />
-				<img src="{$img_dir}tmp/banner4.png" />
+			<div id="home_slider" class="alpha omega">
+				<div class="home_slider_inner container_5">
+					{$HOOK_TOP_SLIDER}
+				</div>
 			</div>
 			{else}
-				{if $page_name != 'pagenotfound' && isset($category)}
+				{if isset($category)}
 					{if $category->id AND $category->id != 1 AND $category->active}
 						{if $scenes || $category->description || $category->id_image}
 						<div class="content_scene_cat">
@@ -137,13 +135,22 @@
 					{/if}
 				{/if}
 			{/if}
-			<div class="page_shadow grid_5 alpha omega clearfix"></div>
-			<div id="columns" class="grid_5 alpha omega clearfix">
-				<!-- Left -->
-				<div id="left_column" class="column grid_1 alpha">
-					{$HOOK_LEFT_COLUMN}
+			<div id="home_banner">
+				<div class="container_5">
+					<img src="{$img_dir}tmp/banner1.png" />
+					<img src="{$img_dir}tmp/banner2.png" />
+					<img src="{$img_dir}tmp/banner3.png" />
+					<img src="{$img_dir}tmp/banner4.png" />
 				</div>
+			</div>
+			<div class="container_5 clearfix">
+				<div class="page_shadow grid_5 alpha omega clearfix"></div>
+				<div id="columns" class="grid_5 alpha omega clearfix">
+					<!-- Left -->
+					<div id="left_column" class="column grid_1 alpha">
+						{$HOOK_LEFT_COLUMN}
+					</div>
 
-				<!-- Center -->
-				<div id="center_column" class="grid_4 omega">
+					<!-- Center -->
+					<div id="center_column" class="grid_4 omega">
 	{/if}

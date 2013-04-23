@@ -104,6 +104,14 @@ h1{margin-bottom:10px;}
 
 	
 }
+/*#header + .content_scene_cat:before {
+	content:'';
+	display:block;
+	position:absolute;
+	bottom:0;
+	left:0;
+	
+}*/
 
 .content_scene_cat .category_info_wrapper {
 	position:relative;

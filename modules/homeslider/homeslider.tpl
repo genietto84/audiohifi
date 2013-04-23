@@ -44,7 +44,11 @@ var homeslider_pause = {$homeslider.pause};
 <ul id="homeslider">
 {foreach from=$homeslider_slides item=slide}
 	{if $slide.active}
-		<li class="{$slide.legend|regex_replace:'/(\w+)-/':''}"><a href="{$slide.url|escape:'htmlall':'UTF-8'}" title="{$slide.description|escape:'htmlall':'UTF-8'}"><img src="{$smarty.const._MODULE_DIR_}/homeslider/images/{$slide.image|escape:'htmlall':'UTF-8'}" alt="{$slide.legend|escape:'htmlall':'UTF-8'}" legend="{$slide.description|escape:'htmlall':'UTF-8'}" height="{$homeslider.height|intval}" width="{$homeslider.width|intval}" /></a></li>
+		<li color="{$slide.legend|regex_replace:'/(\w+)-/':''}">
+			<div class="container_5 clearfix">
+				<a href="{$slide.url|escape:'htmlall':'UTF-8'}" title="{$slide.description|escape:'htmlall':'UTF-8'}"><img src="{$smarty.const._MODULE_DIR_}/homeslider/images/{$slide.image|escape:'htmlall':'UTF-8'}" alt="{$slide.legend|escape:'htmlall':'UTF-8'}" legend="{$slide.description|escape:'htmlall':'UTF-8'}" height="{$homeslider.height|intval}" width="{$homeslider.width|intval}" /></a>
+			</div>
+		</li>
 	{/if}
 {/foreach}
 </ul>

@@ -23,20 +23,23 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 
-		{if !$content_only}
-				</div>
+			{if !$content_only}
+					</div>
 
-			</div>
-			<div class="page_shadow grid_5 alpha omega clearfix"></div>
-			<div id="footer_widget" class="grid_5 alpha omega clearfix">
-				{$HOOK_FOOTER_WIDGET}
-			</div>
+				</div>
+				<div class="page_shadow grid_5 alpha omega clearfix"></div>
+				<div id="footer_widget" class="grid_5 alpha omega clearfix">
+					{$HOOK_FOOTER_WIDGET}
+				</div>
+			</div><!-- container -->
 <!-- Footer -->
-			<div id="footer" class="grid_5 alpha omega clearfix">
-				{$HOOK_FOOTER}
-				{*if $PS_ALLOW_MOBILE_DEVICE}
-					<p class="center clearBoth"><a href="{$link->getPageLink('index', true)}?mobile_theme_ok">{l s='Browse the mobile site'}</a></p>
-				{/if*}
+			<div id="footer" class="clearfix">
+				<div class="footer_inner container_5 clearfix">
+					{$HOOK_FOOTER}
+					{*if $PS_ALLOW_MOBILE_DEVICE}
+						<p class="center clearBoth"><a href="{$link->getPageLink('index', true)}?mobile_theme_ok">{l s='Browse the mobile site'}</a></p>
+					{/if*}
+				</div>
 			</div>
 		</div>
 	{/if}

@@ -5,6 +5,7 @@ modules/blocknewproducts
 modules/blockbestsellers
 modules/blockspecials
 modules/homefeatured
+modules/homeslider/homeslider.js
 
 /* Moduli Aggiunti */
 blockfollowus
