@@ -138,7 +138,7 @@
 			<div id="home_banner" class="alpha omega">
 				<div class="container_5 clearfix">
 					<div class="banner black">
-						<a href="{$link->getCMSLink('3', 'last-news')}">
+						<a href="{$base_uri}content/category/3-news">
 							<img src="{$img_dir}tmp/banner1.png" />
 							<h2>News</h2>
 							<h3>Ultime notizie dal mondo HiFi</h3>

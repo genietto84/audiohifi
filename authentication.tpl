@@ -71,8 +71,6 @@ $(function(){ldelim}
 {/if}
 </script>
 
-<h1>{if !isset($email_create)}{l s='Log in'}{else}{l s='Create your account'}{/if}</h1>
-
 {include file="$tpl_dir./errors.tpl"}
 {assign var='stateExist' value=false}
 {if !isset($email_create)}

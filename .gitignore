@@ -6,3 +6,5 @@ img/.DS_Store
 .DS_Store
 
 modules/.DS_Store
+
+img/tmp/.DS_Store
