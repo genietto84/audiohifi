@@ -59,7 +59,6 @@
 	{/if}
 {elseif isset($cms_category)}
 	<div class="block-cms">
-		<h1><a href="{if $cms_category->id eq 1}{$base_dir}{else}{$link->getCMSCategoryLink($cms_category->id, $cms_category->link_rewrite)}{/if}">{$cms_category->name|escape:'htmlall':'UTF-8'}</a></h1>
 		{if isset($sub_category) & !empty($sub_category)}	
 			<p class="title_block">{l s='List of sub categories in %s:' sprintf=$cms_category->name}</p>
 			<ul class="bullet">

@@ -135,12 +135,36 @@
 					{/if}
 				{/if}
 			{/if}
-			<div id="home_banner">
-				<div class="container_5">
-					<img src="{$img_dir}tmp/banner1.png" />
-					<img src="{$img_dir}tmp/banner2.png" />
-					<img src="{$img_dir}tmp/banner3.png" />
-					<img src="{$img_dir}tmp/banner4.png" />
+			<div id="home_banner" class="alpha omega">
+				<div class="container_5 clearfix">
+					<div class="banner black">
+						<a href="{$link->getCMSLink('3', 'last-news')}">
+							<img src="{$img_dir}tmp/banner1.png" />
+							<h2>News</h2>
+							<h3>Ultime notizie dal mondo HiFi</h3>
+						</a>
+					</div>
+					<div class="banner">
+						<a href="{$link->getCategoryLink(182)}">
+							<img src="{$img_dir}tmp/banner2.png" />
+							<h2>Mercatino Usato</h2>
+							<h3>Il primo professionale in Europa</h3>
+						</a>
+					</div>
+					<div class="banner">
+						<a href="{$link->getCategoryLink(283)}">
+							<img src="{$img_dir}tmp/banner3.png" />
+							<h2>Offerte Speciali</h2>
+							<h3>Approfittane subito!</h3>
+						</a>
+					</div>
+					<div class="banner black">
+						<a href="{$link->getCategoryLink(284)}">
+							<img src="{$img_dir}tmp/banner1.png" />
+							<h2>Consigliati</h2>
+							<h3>Visti nelle maggiori riviste</h3>
+						</a>
+					</div>
 				</div>
 			</div>
 			<div class="container_5 clearfix">

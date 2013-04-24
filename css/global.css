@@ -2226,7 +2226,7 @@ tr.subitem > td:first-child + td {
 
 /** HOME **/
 #featured-products_block_center li:hover{background-color:#efefef}
-#home_banner img{margin-left: 12px;float:left}
+#home_banner img{margin-left: 10px;float:left}
 #home_banner img:first-child{margin-left:0}
 
 /** LEFT COLUMN BLOCK **/
@@ -2266,4 +2266,41 @@ tr.subitem > td:first-child + td {
 ----------------------------------------------- */
 ol, ul {
 	list-style: none;
+}
+
+/********** BANNER ********************/
+#home_banner {
+	margin-top:20px;
+}
+.banner {
+	position:relative;
+	width:276px;
+	height:84px;
+	float:left;
+	margin-left: 10px;
+}   
+.banner:first-child{margin-left:0}     
+.banner img {
+	position:absolute;
+	top:0;
+	left:0;
+}
+.banner h2, .banner h3 {
+	position:absolute;
+	padding: 10px 50px 10px 80px;
+	color:#fff;
+	transition: all 1s;
+	-webkit-transition: all 1s;
+	cursor:pointer;
+}
+.banner.black h2, .banner.black h3 {color:#666;}
+.banner h2 {
+	top:0;
+	left:0;
+}
+.banner h3 {
+	bottom:0;
+	right:0;
+	line-height:15px;
+	font-size:14px;
 }
