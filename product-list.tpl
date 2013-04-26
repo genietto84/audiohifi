@@ -37,8 +37,8 @@
 			{if $totModulo == 0}{assign var='totModulo' value=$nbItemsPerLine}{/if}
 			<li class="ajax_block_product {if $smarty.foreach.homeFeaturedProducts.first}first_item{elseif $smarty.foreach.homeFeaturedProducts.last}last_item{else}item{/if} {if $smarty.foreach.homeFeaturedProducts.iteration%$nbItemsPerLine == 1}first_item_of_line{elseif $smarty.foreach.homeFeaturedProducts.iteration%$nbItemsPerLine == 0}last_item_of_line{elseif $smarty.foreach.homeFeaturedProducts.iteration%$nbItemsPerLine == 1} {/if} {if $smarty.foreach.homeFeaturedProducts.iteration > ($smarty.foreach.homeFeaturedProducts.total - $totModulo)}last_line{/if}">
 				<p class="s_title_block"><a href="{$product.link}" title="{$product.name|truncate:50:'...'|escape:'htmlall':'UTF-8'}">{$product.name|truncate:35:'...'|escape:'htmlall':'UTF-8'}</a></p>
-				<a href="{$product.link}" title="{$product.name|escape:html:'UTF-8'}" class="product_image"><img src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'home_default')}" height="{$homeSize.height}" width="{$homeSize.width}" alt="{$product.name|escape:html:'UTF-8'}" />{if isset($product.new) && $product.new == 1}<span class="new">{l s='New' mod='homefeatured'}</span>{/if}</a>
-				<div class="product_desc"><a href="{$product.link}" title="{l s='More' mod='homefeatured'}">{$product.description_short|strip_tags|truncate:65:'...'}</a></div>
+				<a href="{$product.link}" title="{$product.name|escape:html:'UTF-8'}" class="product_image"><img src="{$link->getImageLink($product.link_rewrite, $product.id_image, 'home_default')}" height="{$homeSize.height}" width="{$homeSize.width}" alt="{$product.name|escape:html:'UTF-8'}" />{if isset($product.new) && $product.new == 1}<span class="new">{l s='New'}</span>{/if}</a>
+				<div class="product_desc"><a href="{$product.link}" title="{l s='Details'}">{$product.description_short|strip_tags|truncate:65:'...'}</a></div>
 				<div class="price_and_button clearfix">
 					{if $product.show_price AND !isset($restricted_country_mode) AND !$PS_CATALOG_MODE}
 						{if $product.specific_prices AND $product.specific_prices.reduction }
@@ -54,18 +54,18 @@
 					<div class="add_to_cart_container">
 						{if ($product.id_product_attribute == 0 OR (isset($add_prod_display) AND ($add_prod_display == 1))) AND $product.available_for_order AND !isset($restricted_country_mode) AND $product.minimal_quantity == 1 AND $product.customizable != 2 AND !$PS_CATALOG_MODE}
 							{if ($product.quantity > 0 OR $product.allow_oosp)}
-							<a class="exclusive ajax_add_to_cart_button" rel="ajax_id_product_{$product.id_product}" href="{$link->getPageLink('cart')}?qty=1&amp;id_product={$product.id_product}&amp;token={$static_token}&amp;add" title="{l s='Add to cart' mod='homefeatured'}">{l s='Cart' mod='homefeatured'}</a>
+							<a class="exclusive ajax_add_to_cart_button" rel="ajax_id_product_{$product.id_product}" href="{$link->getPageLink('cart')}?qty=1&amp;id_product={$product.id_product}&amp;token={$static_token}&amp;add" title="{l s='Add to cart'}">{l s='Cart'}</a>
 							{else}
-							<span class="exclusive">{l s='Cart' mod='homefeatured'}</span>
+							<span class="exclusive">{l s='Cart'}</span>
 							{/if}
 						{else}
 							<div style="height:23px;"></div>
 						{/if}
 					</div>
 					<div class="lnk_more_container">
-						<a class="lnk_more" href="{$product.link}" title="{l s='View' mod='homefeatured'}">{l s='View' mod='homefeatured'}</a>
+						<a class="lnk_more" href="{$product.link}" title="{l s='Details'}">{l s='View'}</a>
 					</div>
-					<div class="added"><span>{l s='Product added to cart' mod='homefeatured'}</span></div>
+					<div class="added"><span>{l s='Product added to cart'}</span></div>
 				</div>
 			</li>
 		{/foreach}

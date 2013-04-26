@@ -169,7 +169,9 @@ span.view_scroll_spacer {
 
 #pb-left-column h1 {
 	padding-bottom:5px;
-	font-size:18px;
+	font-family:'Oswald',sans-serif;
+	font-size:24px;
+	font-weight:normal;
 	text-align: right;
 	color:#f99528;
 	padding-bottom:5px;
@@ -179,6 +181,11 @@ span.view_scroll_spacer {
 
 #pb-left-column #short_description_block {
 	color:#666;
+}
+#pb-left-column #short_description_block h2 {
+	font-size:16px;
+	text-align: right;
+	color:#f99528;
 }
 
 #pb-left-column #short_description_block .buttons_bottom_block {

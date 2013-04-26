@@ -78,6 +78,7 @@
 
 #countries .countries_ul li .lang_iso{
 	margin-left: 5px;
+	font-size:18px;
 }
 #countries .countries_ul li a:hover .lang_iso {
 	text-decoration:underline;
