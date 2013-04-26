@@ -177,7 +177,7 @@ var fieldRequired = '{l s='Please fill in all required fields, then save the cus
 			<span id="view_full_size">
 				<img src="{$link->getImageLink($product->link_rewrite, $cover.id_image, 'large_default')}" {if $jqZoomEnabled}class="jqzoom" alt="{$link->getImageLink($product->link_rewrite, $cover.id_image, 'thickbox_default')}"{else} title="{$product->name|escape:'htmlall':'UTF-8'}" alt="{$product->name|escape:'htmlall':'UTF-8'}" {/if} id="bigpic" width="{$largeSize.width}" height="{$largeSize.height}" />
 				<span class="span_link">{l s='View full size'}</span>
-				{if $product->on_sale }<span class="onsale">{l s='In offerta'}</span>{/if}
+				{if $product->on_sale }<span class="onsale">{l s='On sale'}</span>{elseif $product->new }<span class="new">{l s='New'}</span>{/if}
 			</span>
 		{else}
 			<span id="view_full_size">

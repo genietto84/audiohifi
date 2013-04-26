@@ -22,11 +22,12 @@
 #pb-right-column #image-block img {
 }
 
-#pb-right-column #image-block .onsale {
+#pb-right-column #image-block .onsale,
+#pb-right-column #image-block .new {
 	display: block;
 	position: absolute;
-	top: 14px;
-	right:-38px;
+	top: 30px;
+	right:-30px;
 	padding: 1px 20px;
 	width: 101px;
 	font-size:20px;

@@ -28,7 +28,8 @@
 	overflow:hidden;
 	width:196px;
 }
-#featured-products_block_center .product_image span.new {
+#featured-products_block_center .product_image span.new,
+#featured-products_block_center .product_image span.onsale {
 	display: block;
 	position: absolute;
 	top: 15px;
