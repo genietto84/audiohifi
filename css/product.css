@@ -27,10 +27,12 @@
 	display: block;
 	position: absolute;
 	top: 30px;
-	right:-30px;
+	right:-40px;
 	padding: 1px 20px;
-	width: 101px;
-	font-size:20px;
+	width: 130px;
+	font-family:'Oswald', sans-serif;
+	font-size:35px;
+	line-height: 34px;
 	background-color: #f58220;
 	color: #fff;
 	text-align: center;
@@ -778,7 +780,7 @@ div.oos {
 }
 
 #oosHook {text-align:center;}
-#oosHook #oos_customer_email {width:230px;}
+#oosHook #oos_customer_email {width:223px;height:32px;line-height:32px;padding-left:5px;}
 #oosHook #mailalert_link {
 	background: rgb(255,255,255); /* Old browsers */
 
@@ -806,7 +808,6 @@ div.oos {
 	line-height:32px;
 	border:1px solid #d3d3d3;
 	display:inline-block;
-	margin-top:10px;
 	padding-right:32px;
 	position:relative;
 }
