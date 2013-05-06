@@ -46,6 +46,7 @@ h1{margin-bottom:10px;}
 	width:19px;
 	height:14px;
 	background:url(../img/arrow_bottom_1.png) no-repeat 0 0 transparent;
+	cursor:pointer;
 }
 #subCatButton.hidden {
 	background:url(../img/arrow_right_1.png) no-repeat 0 0 transparent;
