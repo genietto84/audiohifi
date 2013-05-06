@@ -33,7 +33,25 @@ h1{margin-bottom:10px;}
 /* ************************************************************************************************
       SUB CATEGORIES
 ************************************************************************************************ */
-#subcategories {margin-top:15px}
+#subcategories {
+	margin-top:15px;
+	position:relative;
+}
+
+#subCatButton {
+	position:absolute;
+	top:14px;
+	right:10px;
+	display:block;
+	width:19px;
+	height:14px;
+	background:url(../img/arrow_bottom_1.png) no-repeat 0 0 transparent;
+}
+#subCatButton.hidden {
+	background:url(../img/arrow_right_1.png) no-repeat 0 0 transparent;
+	width:14px;
+	height:19px;
+}
 #subcategories h3 {
 	padding:14px 12px;
 	font-size:13px;

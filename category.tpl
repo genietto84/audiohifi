@@ -31,6 +31,7 @@
 		{if isset($subcategories)}
 		<!-- Subcategories -->
 		<div id="subcategories">
+			<span id="subCatButton"> </span>
 			<h3>{l s='Subcategories'}</h3>
 			<ul class="inline_list clearfix">
 			{foreach from=$subcategories item=subcategory}
@@ -76,3 +77,27 @@
 		<p class="warning">{l s='This category is currently unavailable.'}</p>
 	{/if}
 {/if}
+{literal}
+<script>
+	$('document').ready(function(){
+		setTimeout(
+			function(){
+				$('#subcategories ul').slideUp('slow',function(){
+					$('#subCatButton').toggleClass('hidden');
+				});
+			},
+			'800'
+		);
+		
+		$('#subCatButton').bind('click',function(){
+			if($(this).hasClass('hidden')) {
+				$('#subcategories ul').slideDown('slow');
+			} else {
+				$('#subcategories ul').slideUp('slow');
+			}
+			
+			$('#subCatButton').toggleClass('hidden');
+		});
+	});
+</script>
+{/literal}
