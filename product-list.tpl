@@ -31,7 +31,7 @@
 		{assign var='nbLi' value=$products|@count}
 		{math equation="nbLi/nbItemsPerLine" nbLi=$nbLi nbItemsPerLine=$nbItemsPerLine assign=nbLines}
 		{math equation="nbLines*liHeight" nbLines=$nbLines|ceil liHeight=$liHeight assign=ulHeight}
-		<ul style="height:{$ulHeight}px;">
+		<ul id="product_list" style="height:{$ulHeight}px;">
 		{foreach from=$products item=product name=homeFeaturedProducts}
 			{math equation="(total%perLine)" total=$smarty.foreach.homeFeaturedProducts.total perLine=$nbItemsPerLine assign=totModulo}
 			{if $totModulo == 0}{assign var='totModulo' value=$nbItemsPerLine}{/if}

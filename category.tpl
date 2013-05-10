@@ -27,6 +27,7 @@
 {include file="$tpl_dir./errors.tpl"}
 
 {if isset($category)}
+	{$categoryNameComplement|escape:'htmlall':'UTF-8'}
 	{if $category->id AND $category->active}
 		{if isset($subcategories)}
 		<!-- Subcategories -->
