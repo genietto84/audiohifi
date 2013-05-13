@@ -644,7 +644,9 @@ function colorPickerClick(elt)
 										});
 									});
 								});
-	$(elt).parent().parent().parent().children('.color_pick_hidden,#color_pick_hidden').val(id_attribute);
+	$('#color_to_pick_list').parent().children('.color_pick_hidden').val(id_attribute);
+	console.log($('#color_to_pick_list').parent().children('.color_pick_hidden').val());
+	console.log('------------');
 	$('#color_to_pick_span').text($(elt).text());
 	$('#color_to_pick_div .color').css('background-color',$(elt).children('.color').css('background-color'));
 	$('#color_to_pick_list').toggleClass('hidden');
