@@ -24,33 +24,33 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 
-<!-- Module HomeSlider -->
-{if isset($homeslider)}
+<!-- Module myhomeslider -->
+{if isset($myhomeslider)}
 <script type="text/javascript">
-{if isset($homeslider_slides) && $homeslider_slides|@count > 1}
-	{if $homeslider.loop == 1}
-		var homeslider_loop = true;
+{if isset($myhomeslider_slides) && $myhomeslider_slides|@count > 1}
+	{if $myhomeslider.loop == 1}
+		var myhomeslider_loop = true;
 	{else}
-		var homeslider_loop = false;
+		var myhomeslider_loop = false;
 	{/if}
 {else}
-	var homeslider_loop = false;
+	var myhomeslider_loop = false;
 {/if}
-var homeslider_speed = {$homeslider.speed};
-var homeslider_pause = {$homeslider.pause};
+var myhomeslider_speed = {$myhomeslider.speed};
+var myhomeslider_pause = {$myhomeslider.pause};
 </script>
 {/if}
-{if isset($homeslider_slides)}
+{if isset($myhomeslider_slides)}
 <ul id="homeslider">
-{foreach from=$homeslider_slides item=slide}
+{foreach from=$myhomeslider_slides item=slide}
 	{if $slide.active}
-		<li>
+		<li color="{$slide.color}">
 			<div class="container_5 clearfix">
-				<a href="{$slide.url|escape:'htmlall':'UTF-8'}" title="{$slide.description|escape:'htmlall':'UTF-8'}"><img src="{$smarty.const._MODULE_DIR_}/homeslider/images/{$slide.image|escape:'htmlall':'UTF-8'}" alt="{$slide.legend|escape:'htmlall':'UTF-8'}" legend="{$slide.description|escape:'htmlall':'UTF-8'}" height="{$homeslider.height|intval}" width="{$homeslider.width|intval}" /></a>
+				<a href="{$slide.url|escape:'htmlall':'UTF-8'}" title="{$slide.description|escape:'htmlall':'UTF-8'}"><img src="{$smarty.const._MODULE_DIR_}/myhomeslider/images/{$slide.image|escape:'htmlall':'UTF-8'}" alt="{$slide.legend|escape:'htmlall':'UTF-8'}" legend="{$slide.description|escape:'htmlall':'UTF-8'}" height="{$myhomeslider.height|intval}" width="{$myhomeslider.width|intval}" /></a>
 			</div>
 		</li>
 	{/if}
 {/foreach}
 </ul>
 {/if}
-<!-- /Module HomeSlider -->
+<!-- /Module myhomeslider -->

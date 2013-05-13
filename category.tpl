@@ -87,7 +87,7 @@
 					$('#subCatButton').toggleClass('hidden');
 				});
 			},
-			'800'
+			'1500'
 		);
 		
 		$('#subCatButton').bind('click',function(){
