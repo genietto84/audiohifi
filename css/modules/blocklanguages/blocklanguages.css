@@ -47,6 +47,7 @@
 	border-style: solid;
 	border-width: 15px;
 }
+.ie8 #countries .countries_ul:after {display:none;}
 #countries .countries_ul{
 	display:none;
 	z-index: 10000;
@@ -62,6 +63,7 @@
 	right:0px;
 	padding:5px 10px;
 	height:auto;
+	background:#030303;
 	background:rgba(0,0,0,0.75);
 	color:#fff;
 	-moz-border-radius:5px;

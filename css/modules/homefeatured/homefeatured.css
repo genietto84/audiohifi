@@ -84,8 +84,10 @@
 	-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(SizingMethod='auto expand', M11=0.7071067811865476, M12=-0.7071067811865475, M21=0.7071067811865475, M22=0.7071067811865476)"; /* IE8 */
 }
 
-.ie9 #featured-products_block_center .product_image span.new{top:-18px;right:-38px}
-.ie8 #featured-products_block_center .product_image span.new{top:-21px;right:-38px}
+.ie9 #featured-products_block_center li span.new,
+.ie8 #featured-products_block_center li span.onsale{top:-18px;right:-38px}
+.ie8 #featured-products_block_center li span.new,
+.ie8 #featured-products_block_center li span.onsale {top:-21px;right:-38px}
 .lt-ie6 #featured-products_block_center .product_image span.new {top:-30px;right:-25px}
 
 #featured-products_block_center .product_desc {min-height:60px;font-size:12px;}
